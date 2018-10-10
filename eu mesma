@@ -1,1 +1,32 @@
 ISABELLY KAWANE OLIVEIRA MOURÃO
+//dia 10/10
+package exceptionhandling;
+//@author Isa, Lud, Roque, Gabriel
+import java.util.Scanner;
+import java.util.InputMismatchException;
+public class Exceptionhandling {
+ 
+    public static void main(String[] args) {
+        Scanner read = new Scanner(System.in);
+           int division;           
+        try{ 
+        System.out.println("enter a number");
+        int number1 = read.nextInt();
+        System.out.println("enter a second number");
+        int number2 = read.nextInt();
+        division = number1/number2;
+        }catch (ArithmeticException e){
+            System.out.println("you tried to division by zero");   
+            System.out.println("erro "+e);
+            division = 0;
+        }
+        catch (InputMismatchException e){
+            System.out.println("you tried to division by zero");   
+            System.out.println("erro "+e);
+            division = 0;   
+        }
+        System.out.println("division: "+division);
+        //ArithmeticException
+        //InputMismatchException
+    }    
+}
